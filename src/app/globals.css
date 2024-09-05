@@ -1,33 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Protest+Guerrilla&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* secondary text: #ababab; */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Oswald', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.app {
+  font-family: sans-serif;
+  min-height: 100vh;
+  text-align: center;
+  background: black;
+}
+
+/* nav bar */
+/* Header Styling */
+header {
+  background-color: black;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logo a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+.nav-links a.active {
+  color: white;
+}
+.nav-links a {
+  color: #ababab;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Cart Icon */
+
+.cart img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the navigation links on small screens */
+  }
+
+  .cart {
+    margin-left: auto;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.intro {
+  padding: 20px;
+  text-align: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.intro h1 {
+  color: white;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.intro h3 {
+  color: #cccccc;
+  font-size: 20px;
+}
+
+.specifications {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  margin: 20px auto;
+}
+
+.intro p,
+.specifications p {
+  color: #cccccc;
+  font-size: 15px;
+}
+
+.specifications h3 {
+  color: white;
+  font-size: 20px;
+}
+
+.article {
+  padding: 20px 0;
+  margin: 20px auto;
+  width: 80%;
+  color: white;
+}
+
+.article.left {
+  text-align: left;
+}
+
+.article.right {
+  text-align: right;
+}
+
+.article h3 {
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.article p {
+  font-size: 16px;
+}
+
+.article img {
+  padding-top: 40px;
+  width: 100%;
+}
+
+/* Footer.css */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 0 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-logo h3 {
+  margin: 0;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+/* color picker */
+.color-name {
+  padding: 10px 0;
+  width: 80%;
+  color: white;
+  text-align: center;
+}
+
+.color-name h3 {
+  font-size: 30px;
+}
+
+.color-name {
+  margin: 10px auto;
+  width: 80%;
+  color: white;
+}
+
+.color-picker {
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+  margin: 10px auto 40px;
+  gap: 10px;
+}
+
+.color-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+.color-icon.active {
+  border: 2px solid white;
+}
+
+.color-picker img {
+  width: 80%;
+  height: 80%;
 }
