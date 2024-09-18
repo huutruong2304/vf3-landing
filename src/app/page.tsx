@@ -1,5 +1,5 @@
+import ColorPicker from '@/components/ColorPicker';
 import Image from 'next/image';
-import ColorPicker from '../../components/ColorPicker';
 
 export default function Home() {
   const videoLink =
