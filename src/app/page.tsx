@@ -1,4 +1,5 @@
 import ColorPicker from '@/components/ColorPicker';
+import ScrollToTop from '@/components/ScrollToTop';
 import Image from 'next/image';
 
 export default function Home() {
@@ -95,6 +96,7 @@ export default function Home() {
           height={685}
         />
       </div>
+      <ScrollToTop />
     </main>
   );
 }
